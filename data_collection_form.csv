@@ -1,0 +1,6 @@
+timestamp,location,weather,pedestrians_north,pedestrians_south,pedestrians_east,pedestrians_west,vehicles_north,vehicles_south,vehicles_east,vehicles_west,pedestrian_wait_time_1,pedestrian_wait_time_2,pedestrian_wait_time_3,traffic_light_ns_green_time,traffic_light_ew_green_time,traffic_light_yellow_time,notes
+2024-01-15 14:30:00,Campus Main St & University Ave,Sunny,2,1,0,1,5,3,4,2,35,40,25,30,25,3,Students crossing after class
+2024-01-15 14:31:00,Campus Main St & University Ave,Sunny,3,0,1,2,7,2,6,3,30,45,20,30,25,3,Rush hour traffic
+2024-01-15 14:32:00,Campus Main St & University Ave,Sunny,1,2,0,1,4,5,3,4,50,35,30,30,25,3,Elderly person waiting
+2024-01-15 14:33:00,Campus Main St & University Ave,Sunny,0,3,1,0,6,4,5,2,40,25,35,30,25,3,Group of students
+2024-01-15 14:34:00,Campus Main St & University Ave,Sunny,2,1,2,1,8,3,4,6,30,45,20,30,25,3,Heavy vehicle traffic

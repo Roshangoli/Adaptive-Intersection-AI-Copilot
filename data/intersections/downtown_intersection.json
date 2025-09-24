@@ -1,0 +1,11 @@
+{
+  "location": "Downtown Business District",
+  "traffic_lights": 8,
+  "pedestrian_crossings": 8,
+  "peak_hours": [
+    "07:00-09:00",
+    "17:00-19:00"
+  ],
+  "avg_wait_time": 35.2,
+  "pedestrian_priority": false
+}

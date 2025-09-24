@@ -1,0 +1,12 @@
+{
+  "location": "University Campus",
+  "traffic_lights": 4,
+  "pedestrian_crossings": 4,
+  "peak_hours": [
+    "08:00-09:00",
+    "12:00-13:00",
+    "17:00-18:00"
+  ],
+  "avg_wait_time": 25.5,
+  "pedestrian_priority": true
+}

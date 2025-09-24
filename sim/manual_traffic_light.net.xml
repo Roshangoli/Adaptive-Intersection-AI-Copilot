@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,300.00,300.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+    
+    <!-- External nodes -->
+    <junction id="n0" type="priority" x="0.00" y="150.00" incLanes="" intLanes="" shape="0.00,145.00 0.00,155.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="n2" type="priority" x="300.00" y="150.00" incLanes="" intLanes="" shape="300.00,145.00 300.00,155.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="n3" type="priority" x="150.00" y="0.00" incLanes="" intLanes="" shape="145.00,0.00 155.00,0.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="n4" type="priority" x="150.00" y="300.00" incLanes="" intLanes="" shape="145.00,300.00 155.00,300.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    
+    <!-- Central traffic light junction -->
+    <junction id="J0" type="traffic_light" x="150.00" y="150.00" incLanes="e0_0 e2_0 e4_0 e6_0" intLanes=":J0_0_0 :J0_1_0 :J0_2_0 :J0_3_0" shape="150.00,145.00 155.00,150.00 150.00,155.00 145.00,150.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+        <request index="2" response="00" foes="00" cont="0"/>
+        <request index="3" response="00" foes="00" cont="0"/>
+    </junction>
+
+    <!-- Edges -->
+    <edge id="e0" from="n0" to="J0" priority="1">
+        <lane id="e0_0" index="0" speed="13.89" length="150.00" shape="0.00,150.00 150.00,150.00"/>
+    </edge>
+    <edge id="e1" from="J0" to="n2" priority="1">
+        <lane id="e1_0" index="0" speed="13.89" length="150.00" shape="150.00,150.00 300.00,150.00"/>
+    </edge>
+    <edge id="e2" from="n2" to="J0" priority="1">
+        <lane id="e2_0" index="0" speed="13.89" length="150.00" shape="300.00,150.00 150.00,150.00"/>
+    </edge>
+    <edge id="e3" from="J0" to="n0" priority="1">
+        <lane id="e3_0" index="0" speed="13.89" length="150.00" shape="150.00,150.00 0.00,150.00"/>
+    </edge>
+    <edge id="e4" from="n3" to="J0" priority="1">
+        <lane id="e4_0" index="0" speed="13.89" length="150.00" shape="150.00,0.00 150.00,150.00"/>
+    </edge>
+    <edge id="e5" from="J0" to="n4" priority="1">
+        <lane id="e5_0" index="0" speed="13.89" length="150.00" shape="150.00,150.00 150.00,300.00"/>
+    </edge>
+    <edge id="e6" from="n4" to="J0" priority="1">
+        <lane id="e6_0" index="0" speed="13.89" length="150.00" shape="150.00,300.00 150.00,150.00"/>
+    </edge>
+    <edge id="e7" from="J0" to="n3" priority="1">
+        <lane id="e7_0" index="0" speed="13.89" length="150.00" shape="150.00,150.00 150.00,0.00"/>
+    </edge>
+
+    <!-- Internal lanes -->
+    <edge id=":J0_0_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_0_0" index="0" speed="13.89" length="10.00" shape="145.00,150.00 150.00,150.00"/>
+    </edge>
+    <edge id=":J0_1_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_1_0" index="0" speed="13.89" length="10.00" shape="150.00,150.00 155.00,150.00"/>
+    </edge>
+    <edge id=":J0_2_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_2_0" index="0" speed="13.89" length="10.00" shape="150.00,145.00 150.00,150.00"/>
+    </edge>
+    <edge id=":J0_3_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_3_0" index="0" speed="13.89" length="10.00" shape="150.00,150.00 150.00,155.00"/>
+    </edge>
+
+</net>

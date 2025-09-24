@@ -1,0 +1,5 @@
+controller,avg_vehicle_wait_time,avg_pedestrian_wait_time,throughput_efficiency,safety_score,fairness_score
+Fixed-Time,45.2,38.7,85,41.949999999999996,87.0
+Adaptive,32.1,28.4,92,57.400000000000006,92.6
+RL Controller,28.5,22.1,95,66.85,87.2
+Our AI Copilot,24.3,18.9,98,71.65,89.19999999999999

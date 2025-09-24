@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <!-- Nodes (Junctions) -->
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,200.00,200.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+    
+    <!-- Junction definitions -->
+    <junction id="J0" type="priority" x="100.00" y="100.00" incLanes="E0_0 E1_0 E2_0 E3_0" intLanes=":J0_0_0 :J0_1_0 :J0_2_0 :J0_3_0" shape="100.00,95.00 105.00,100.00 100.00,105.00 95.00,100.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+        <request index="2" response="00" foes="00" cont="0"/>
+        <request index="3" response="00" foes="00" cont="0"/>
+    </junction>
+
+    <!-- Edge definitions -->
+    <!-- North-South road -->
+    <edge id="E0" from="N0" to="J0" priority="1">
+        <lane id="E0_0" index="0" speed="13.89" length="100.00" shape="0.00,100.00 100.00,100.00"/>
+    </edge>
+    <edge id="E1" from="J0" to="S0" priority="1">
+        <lane id="E1_0" index="0" speed="13.89" length="100.00" shape="100.00,100.00 200.00,100.00"/>
+    </edge>
+    
+    <!-- South-North road -->
+    <edge id="E2" from="S0" to="J0" priority="1">
+        <lane id="E2_0" index="0" speed="13.89" length="100.00" shape="200.00,100.00 100.00,100.00"/>
+    </edge>
+    <edge id="E3" from="J0" to="N0" priority="1">
+        <lane id="E3_0" index="0" speed="13.89" length="100.00" shape="100.00,100.00 0.00,100.00"/>
+    </edge>
+    
+    <!-- East-West road -->
+    <edge id="E4" from="E0" to="J0" priority="1">
+        <lane id="E4_0" index="0" speed="13.89" length="100.00" shape="100.00,0.00 100.00,100.00"/>
+    </edge>
+    <edge id="E5" from="J0" to="W0" priority="1">
+        <lane id="E5_0" index="0" speed="13.89" length="100.00" shape="100.00,100.00 100.00,200.00"/>
+    </edge>
+    
+    <!-- West-East road -->
+    <edge id="E6" from="W0" to="J0" priority="1">
+        <lane id="E6_0" index="0" speed="13.89" length="100.00" shape="100.00,200.00 100.00,100.00"/>
+    </edge>
+    <edge id="E7" from="J0" to="E0" priority="1">
+        <lane id="E7_0" index="0" speed="13.89" length="100.00" shape="100.00,100.00 100.00,0.00"/>
+    </edge>
+
+    <!-- External nodes -->
+    <junction id="N0" type="priority" x="0.00" y="100.00" incLanes="" intLanes="" shape="0.00,95.00 0.00,105.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="S0" type="priority" x="200.00" y="100.00" incLanes="" intLanes="" shape="200.00,95.00 200.00,105.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="E0" type="priority" x="100.00" y="0.00" incLanes="" intLanes="" shape="95.00,0.00 105.00,0.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="W0" type="priority" x="100.00" y="200.00" incLanes="" intLanes="" shape="95.00,200.00 105.00,200.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+    </junction>
+
+    <!-- Internal lanes for the intersection -->
+    <edge id=":J0_0_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_0_0" index="0" speed="13.89" length="10.00" shape="95.00,100.00 100.00,100.00"/>
+    </edge>
+    <edge id=":J0_1_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_1_0" index="0" speed="13.89" length="10.00" shape="100.00,100.00 105.00,100.00"/>
+    </edge>
+    <edge id=":J0_2_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_2_0" index="0" speed="13.89" length="10.00" shape="100.00,95.00 100.00,100.00"/>
+    </edge>
+    <edge id=":J0_3_0" from="J0" to="J0" priority="1">
+        <lane id=":J0_3_0" index="0" speed="13.89" length="10.00" shape="100.00,100.00 100.00,105.00"/>
+    </edge>
+
+</net>
